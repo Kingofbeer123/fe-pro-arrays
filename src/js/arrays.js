@@ -17,10 +17,12 @@ function forEach(array, callback) {
  Помните, что вы передаете функцию, которая ожидает 3 аргумента, текущий элемент, индекс и сам массив. Автоматическая проверка будет это учитывать.
 */
 function map(array, callback) {
+  let mapResult = []; 
   for (let i = 0; i < array.length; i++) {
-    let newArray = [callback(array[i], i, array)];
-    return newArray;
+    callback(array[i], i, array);
+    mapResult.push(i);
   }
+  return mapResult;
 }
 
 /* Функция принимает в себе первым аргументом массив, вторым функцию которая будет вызываться для каждого элемента массива
