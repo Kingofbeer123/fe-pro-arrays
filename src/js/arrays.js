@@ -19,8 +19,8 @@ function forEach(array, callback) {
 function map(array, callback) {
   for (let i = 0; i < array.length; i++) {
     const mapResult = callback(array[i], i, array)
+    return mapResult;
   } 
-  return mapResult;
 }
 
 /* Функция принимает в себе первым аргументом массив, вторым функцию которая будет вызываться для каждого элемента массива
