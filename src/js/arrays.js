@@ -19,7 +19,7 @@ function forEach(array, callback) {
 function map(array, callback) {
   let new_array = [];
   for (let i = 0; i < array.length; i++) {
-    callback(array[i], i, array);
+    new_array.callback(array[i], i, array);
   }
   return new_array;
 }
