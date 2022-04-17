@@ -20,8 +20,8 @@ function map(array, callback) {
   const mapResult = [];
   for (let i = 0; i < array.length; i++) {
     callback(array[i], i, array);
-    return mapResult[i];
   }
+  return mapResult[i];
 }
 
 /* Функция принимает в себе первым аргументом массив, вторым функцию которая будет вызываться для каждого элемента массива
