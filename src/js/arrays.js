@@ -19,8 +19,8 @@ function forEach(array, callback) {
 function map(array, callback) {
   let mapResult = []; 
   for (let i = 0; i < array.length; i++) {
-    callback(array[i], i, array);
     mapResult.push(array[i]);
+    callback(array[i], i, array);
   }
   return mapResult;
 }
