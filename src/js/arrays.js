@@ -16,12 +16,13 @@ function forEach(array, callback) {
  Фишка задания сделать свою реализацию, чтобы понять, как он работает под капотом. Для перебора советую использовать for цикл
  Помните, что вы передаете функцию, которая ожидает 3 аргумента, текущий элемент, индекс и сам массив. Автоматическая проверка будет это учитывать.
 */
-function map(array, callback) { 
+function map(array, callback) {
+  let mapResult = []; 
   for (let i = 0; i < array.length; i++) {
     callback(array[i], i, array);
-    array.push(array[i]);
+    mapResult.push(array[i]);
   }
-  return array;
+  return mapResult;
 }
 
 /* Функция принимает в себе первым аргументом массив, вторым функцию которая будет вызываться для каждого элемента массива
