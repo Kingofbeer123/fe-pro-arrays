@@ -20,7 +20,7 @@ function map(array, callback) {
   let mappedArray = []; 
   for (let i = 0; i < array.length; i++) {
     callback(array[i], i, array);
-    mapResult.push(array[i]);
+    mappedArray.push(array[i]);
   }
   return mappedArray;
 }
