@@ -33,12 +33,12 @@ function map(array, callback) {
 function filter(array, callback) {
   const Array2 = []; 
   for (let i = 0; i < array.length; i++) {
-    if (callback(array[i], i, array)) {
+    if (callback(array[i], i, array) === true) {
       Array2.push(callback(array[i], i, array));
       return true;
     }
   }
-  return false;
+  return Array2;
 }
 
 /* Функция принимает в себе первым аргументом массив, вторым функцию которая будет вызываться для каждого элемента массива, 3 аргумент изначальный вариант
