@@ -60,7 +60,12 @@ function reduce(array, callback, initialValue) {
  Помните, что вы передаете функцию, которая ожидает 3 аргумента, текущий элемент, индекс и сам массив. Автоматическая проверка будет это учитывать.
 */
 function some(array, callback) {
-
+  for (let i = 0; i < array.length; i++) {
+    if(callback(array[i], i, array) === true) {
+      return true;
+    }
+  }
+  return false;
 }
 
 /* Функция принимает в себе первым аргументом массив, вторым функцию которая будет вызываться для каждого элемента массива
@@ -70,7 +75,12 @@ function some(array, callback) {
  Помните, что вы передаете функцию, которая ожидает 3 аргумента, текущий элемент, индекс и сам массив. Автоматическая проверка будет это учитывать.
 */
 function every(array, callback) {
-
+  for (let i = 0; i < array.length; i++) {
+    if(callback(array[i], i, array) === false) {
+      return false;
+    }
+  }
+  return true;
 }
 
 // Эту часть не удаляем, она важна для проверки результата
