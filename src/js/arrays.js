@@ -17,7 +17,7 @@ function forEach(array, callback) {
  Помните, что вы передаете функцию, которая ожидает 3 аргумента, текущий элемент, индекс и сам массив. Автоматическая проверка будет это учитывать.
 */
 function map(array, callback) {
-  let mappedArray = []; 
+  const mappedArray = []; 
   for (let i = 0; i < array.length; i++) {
     callback(array[i], i, array);
     mappedArray.push(array[i]);
