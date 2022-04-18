@@ -19,8 +19,7 @@ function forEach(array, callback) {
 function map(array, callback) {
   const Array2 = []; 
   for (let i = 0; i < array.length; i++) {
-    callback(array[i], i, array);
-    Array2.push(array[i]);
+    Array2.push(callback(array[i], i, array));
   }
   return Array2;
 }
@@ -32,7 +31,14 @@ function map(array, callback) {
  Помните, что вы передаете функцию, которая ожидает 3 аргумента, текущий элемент, индекс и сам массив. Автоматическая проверка будет это учитывать.
 */
 function filter(array, callback) {
-
+  const Array2 = []; 
+  for (let i = 0; i < array.length; i++) {
+    if (callback(array[i], i, array)) {
+      Array2.push(callback(array[i], i, array));
+      return true;
+    }
+  }
+  return false;
 }
 
 /* Функция принимает в себе первым аргументом массив, вторым функцию которая будет вызываться для каждого элемента массива, 3 аргумент изначальный вариант
