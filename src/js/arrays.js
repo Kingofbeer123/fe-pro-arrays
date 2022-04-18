@@ -34,9 +34,8 @@ function map(array, callback) {
 function filter(array, callback) {
   const filteredArray = []; 
   for (let i = 0; i < array.length; i++) {
-    callback(array[i], i, array);
-    if (callback() = true) {
-      filteredArray.push(array[i]);
+    if (callback(array[i], i, array) = true) {
+    filteredArray.push(array[i]);
     }
   }
   return filteredArray;
